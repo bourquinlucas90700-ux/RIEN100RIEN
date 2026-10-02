@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BrixHub Test — Recherche</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand">BRIX<span>HUB</span></div>
+      <div class="badge">DONNÉES DE TEST</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">API TEST CONSOLE</p>
+      <h1>Recherche BrixHub</h1>
+      <p>Interface de test pour l'API BrixHub avec données fictives.</p>
+    </section>
+
+    <section class="panel">
+      <div class="fields">
+        <label>
+          <span>TYPE DE RECHERCHE</span>
+          <select id="type">
+            <option value="nom_famille">Nom de famille</option>
+            <option value="prenom">Prénom</option>
+            <option value="email">Email</option>
+            <option value="nom_utilisateur">Pseudo</option>
+            <option value="telephone">Téléphone</option>
+            <option value="ville">Ville</option>
+            <option value="code_postal">Code postal</option>
+          </select>
+        </label>
+
+        <label class="query">
+          <span>VALEUR</span>
+          <input id="query" autocomplete="off" placeholder="Ex. martin">
+        </label>
+
+        <button id="search">Rechercher</button>
+      </div>
+
+      <div class="options">
+        <label>
+          <span>Résultats par page</span>
+          <select id="perPage">
+            <option>10</option>
+            <option selected>20</option>
+            <option>50</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section id="status" class="status hidden"></section>
+
+    <section id="results" class="results hidden">
+      <div class="results-head">
+        <div>
+          <p class="eyebrow">RÉSULTATS</p>
+          <h2 id="resultTitle">—</h2>
+        </div>
+        <button id="copy" class="secondary">Copier JSON</button>
+      </div>
+      <div id="resultList"></div>
+      <div class="pagination">
+        <button id="prev" class="secondary">← Précédent</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="next" class="secondary">Suivant →</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
